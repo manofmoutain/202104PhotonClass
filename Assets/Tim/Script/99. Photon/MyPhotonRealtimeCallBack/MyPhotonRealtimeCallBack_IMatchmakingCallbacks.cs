@@ -36,8 +36,8 @@ namespace Tim
             string strfriendList = "";
             for (int i = 0; i < friendList.Count; i++)
             {
-                strfriendList += string.Format("{0} - Name(已過時請改用UserId):{0}, UserId:{1}, IsOnline:{2}, Room:{3}, IsInRoom:{4},\n" +
-                    "ToString():{5} \n",
+                strfriendList += string.Format("{0} - Name(已過時請改用UserId):{1}, UserId:{2}, IsOnline:{3}, Room:{4}, IsInRoom:{5},\n" +
+                    "ToString():{6} \n",
                     i,
                     friendList[i].Name,
                     friendList[i].UserId,

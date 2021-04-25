@@ -26,6 +26,37 @@ namespace Kujata.Scripts.Main
             base.OnJoinedLobby();
             _btnManager.lobbyGO.SetActive(true);
         }
+
+        public override void OnLeftLobby()
+        {
+            base.OnLeftLobby();
+            _btnManager.masterGO.SetActive(true);
+        }
+
+        public override void OnJoinedRoom()
+        {
+            base.OnJoinedRoom();
+            print($"已加入{_btnManager.RoomName}");
+            _btnManager.roomGO.SetActive(true);
+        }
+
+        public override void OnCreateRoomFailed(short returnCode, string message)
+        {
+            base.OnCreateRoomFailed(returnCode, message);
+            _btnManager.lobbyGO.SetActive(true);
+        }
+
+        public override void OnJoinRandomFailed(short returnCode, string message)
+        {
+            base.OnJoinRandomFailed(returnCode, message);
+            _btnManager.lobbyGO.SetActive(true);
+        }
+
+        public override void OnJoinRoomFailed(short returnCode, string message)
+        {
+            base.OnJoinRoomFailed(returnCode, message);
+            _btnManager.lobbyGO.SetActive(true);
+        }
     }
 
 }
