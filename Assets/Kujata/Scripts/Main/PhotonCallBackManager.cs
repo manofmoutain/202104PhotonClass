@@ -19,6 +19,7 @@ namespace Kujata.Scripts.Main
         public override void OnConnectedToMaster()
         {
             base.OnConnectedToMaster();
+            _btnManager.masterGO.SetActive(true);
         }
 
         public override void OnJoinedLobby()

@@ -45,7 +45,6 @@ namespace Kujata.Scripts.Main
             loginBtn.onClick.AddListener(delegate
             {
                 startGO.SetActive(false);
-                masterGO.SetActive(true);
                 ConnectToPhotonSetting(inputName.text);
             });
             
@@ -160,7 +159,7 @@ namespace Kujata.Scripts.Main
         void GetCustomRoomList()
         {
             TypedLobby typedLobby = new TypedLobby("XD" , LobbyType.SqlLobby);
-            PhotonNetwork.GetCustomRoomList(typedLobby , "C0='hello'");
+            PhotonNetwork.GetCustomRoomList(typedLobby , "C0 = 'Hello'");
         }
     }
 }
